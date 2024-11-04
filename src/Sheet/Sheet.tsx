@@ -4,7 +4,7 @@ import Drawer from "@mui/material/Drawer";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useSheet } from "./context/useSheet";
 
-const drawerWidth = 240;
+const drawerWidth = 320;
 type StyledDrawerProps = {
   open?: boolean;
   variant?: SheetProps["variant"];

@@ -7,7 +7,7 @@ type SheetMainContainerProps = {
 
 const Main = styled("main")(({ theme }) => {
   return {
-    flexGrow: 1,
+    width: '100%',
     padding: theme.spacing(3),
   };
 });
