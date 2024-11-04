@@ -13,8 +13,9 @@ type StyledDrawerProps = {
 const StyledDrawer = styled(Drawer, {
   shouldForwardProp: () => true,
 })<StyledDrawerProps>(({ theme, open, variant, isMobile }) => {
-  let sheetWidth = isMobile ? '100%' : drawerWidth
   const sheetHeight = isMobile ? 'auto' : '100%'
+  const sheetMaxHeight = isMobile ? '50%' : '100%'
+  let sheetWidth = isMobile ? '100%' : drawerWidth
   if (variant === "persistent") {
     sheetWidth = open ? drawerWidth : 0
   }
@@ -28,6 +29,7 @@ const StyledDrawer = styled(Drawer, {
     flexShrink: 0,
     "& .MuiDrawer-paper": {
       height: sheetHeight,
+      maxHeight: sheetMaxHeight,
       width: sheetWidth,
       boxSizing: "border-box",
     },

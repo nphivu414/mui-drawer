@@ -1,3 +1,4 @@
+import { Box } from "@mui/material"
 import React from "react"
 
 type SheetContentProps = {
@@ -6,8 +7,10 @@ type SheetContentProps = {
 
 export const SheetContent = ({ children }: SheetContentProps) => {
   return (
-    <div>
+    <Box  sx={{
+      flexGrow: 1
+    }}>
       {children}
-    </div>
+    </Box>
   )
 }
